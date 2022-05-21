@@ -7,6 +7,8 @@ public class Main {
 
     private static void printAuthorWithLongestStropheNumber(Poem[] poems) {
         Poem longestPoem = null;
+//        longestPoem.getCreator(); //to wywoła NullPointerException ponieważ w zmiennej longestPoem nie mamy żadnego obiektu!
+
         for (Poem poem : poems) {
             if (longestPoem == null) {
                 longestPoem = poem;
@@ -31,5 +33,16 @@ public class Main {
         Poem[] poems = {firstPoem, secondPoem, thirdPoem, fourthPoem};
 
         return poems;
+    }
+
+    private static void sample() {
+        Author2 author2 = new Author2();
+        author2.setSurname("mickiewicz");
+        author2.setNationality("litwa");
+
+
+        author2.setSurname("mickiewicz 2");
+
+
     }
 }
